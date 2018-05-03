@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Tavolo 1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textTavolo"
+        app:layout_constraintStart_toEndOf="@+id/textTavolo" />
+
+    <TextView
+        android:id="@+id/textTavolo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Tavolo N°:"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkOccupato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="auto"
+        android:text="Occupato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTavolo" />
+
+    <TextView
+        android:id="@+id/textPosti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Posti: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textNum"
+        app:layout_constraintStart_toEndOf="@+id/textNum" />
+
+    <TextView
+        android:id="@+id/textNumPosto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Numero Posti"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textPosti"
+        app:layout_constraintStart_toEndOf="@+id/textPosti" />
+
+    <CheckBox
+        android:id="@+id/checkPronto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:checked="false"
+        android:text="Pronto"
+        app:layout_constraintBottom_toBottomOf="@+id/checkOccupato"
+        app:layout_constraintStart_toEndOf="@+id/checkOccupato" />
+</android.support.constraint.ConstraintLayout>
