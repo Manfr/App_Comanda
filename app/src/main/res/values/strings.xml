@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Prova</string>
+    <string name="ListaTavoli">Lista Tavoli</string>
+    <string name="Liberi">Liberi</string>
+    <string name="Numero_Tavolo">NumTav</string>
+    <string name="NumPosti">Numero Posti</string>
+    <string name="Libero">Libero</string>
+    <string name="Conto">Conto</string>
+    <string name="Conferma">Conferma</string>
 </resources>
