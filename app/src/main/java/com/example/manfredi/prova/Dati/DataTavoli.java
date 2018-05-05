@@ -18,7 +18,7 @@ import java.util.Map;
  * Classe che simula la sorgente dei dati
  */
 public class DataTavoli {
-
+    private static int Lunghezza = 8;
     private static final String TAG = "Tavolo" ;
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
@@ -45,13 +45,25 @@ public class DataTavoli {
         return instance;
     }
 
+    public int getSize (){
+        return Lunghezza;
+    }
 
     public void addTavolo(Tavolo tavolo) {
         elencoTavoli.put(tavolo.getNumTav(), tavolo);
+        Lunghezza++;
+        myRef.child("Tavolo").child(tavolo.getNumTav()).child("Tavolo n°").setValue(tavolo.getNumTav());
+        myRef.child("Tavolo").child(tavolo.getNumTav()).child("Numero posti").setValue(tavolo.getNumPosti());
+        if(tavolo.isStatoTav())
+            myRef.child("Tavolo").child(tavolo.getNumTav()).child("Libero").setValue("si");
+        else
+            myRef.child("Tavolo").child(tavolo.getNumTav()).child("Libero").setValue("no");
     }
 
     public void deleteTavolo(String numTav) {
         elencoTavoli.remove(numTav);
+        Lunghezza--;
+        myRef.child("Tavolo").child(numTav).setValue(null);
     }
 
     public List<Tavolo> getListaTavoli(boolean Bottone) {
@@ -74,6 +86,20 @@ public class DataTavoli {
 
     private void Tavoliesempio() {
 
+
+        elencoTavoli.put("1", new Tavolo("1", 4, true));
+        elencoTavoli.put("2", new Tavolo("2", 4, true));
+        elencoTavoli.put("3", new Tavolo("3", 2, true));
+        elencoTavoli.put("4", new Tavolo("4", 2, false));
+        elencoTavoli.put("5", new Tavolo("5", 6, false));
+        elencoTavoli.put("6", new Tavolo("6", 4, true));
+        elencoTavoli.put("7", new Tavolo("7", 8, true));
+        elencoTavoli.put("8", new Tavolo("8", 2, false));
+    }
+    public void setData() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference();
+        myRef.child("Tavolo").setValue(null); //PULISCO MOMENTANEAMENTE
         myRef.child("Tavolo").child("1").child("Tavolo n°").setValue("1");
         myRef.child("Tavolo").child("1").child("Numero posti").setValue(4);
         myRef.child("Tavolo").child("1").child("Libero").setValue("si");
@@ -98,15 +124,6 @@ public class DataTavoli {
         myRef.child("Tavolo").child("8").child("Tavolo n°").setValue("8");
         myRef.child("Tavolo").child("8").child("Numero posti").setValue(2);
         myRef.child("Tavolo").child("8").child("Libero").setValue("no");
-        elencoTavoli.put("1", new Tavolo("1", 4, true));
-        elencoTavoli.put("2", new Tavolo("2", 4, true));
-        elencoTavoli.put("3", new Tavolo("3", 2, true));
-        elencoTavoli.put("4", new Tavolo("4", 2, false));
-        elencoTavoli.put("5", new Tavolo("5", 6, false));
-        elencoTavoli.put("6", new Tavolo("6", 4, true));
-        elencoTavoli.put("7", new Tavolo("7", 8, true));
-        elencoTavoli.put("8", new Tavolo("8", 2, false));
     }
-
 
 }

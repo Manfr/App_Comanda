@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "100639957901",
-    "firebase_url": "https://appcomanda-ec4f9.firebaseio.com",
-    "project_id": "appcomanda-ec4f9",
-    "storage_bucket": "appcomanda-ec4f9.appspot.com"
+    "project_number": "360134545222",
+    "firebase_url": "https://appcomanda-5dc57.firebaseio.com",
+    "project_id": "appcomanda-5dc57",
+    "storage_bucket": "appcomanda-5dc57.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:100639957901:android:d8738a8a3ed1e57d",
+        "mobilesdk_app_id": "1:360134545222:android:d8738a8a3ed1e57d",
         "android_client_info": {
           "package_name": "com.example.manfredi.prova"
         }
       },
       "oauth_client": [
         {
-          "client_id": "100639957901-ivjhbidhsdmae8rgmiu30lm7pjvlssms.apps.googleusercontent.com",
+          "client_id": "360134545222-vb3ddbvl8a5iehdqcq0rdhep5esvhpq8.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.manfredi.prova",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "100639957901-49d6d3sfbfoh4uslv5r6o2c64np5dakj.apps.googleusercontent.com",
+          "client_id": "360134545222-9v6r7q2nenu438vsk39dvlmjse329o9m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDSMqIKXB7jXe9c_j1FdSYcwcab6nGULU0"
+          "current_key": "AIzaSyBYMr9rtnWGddmeNwsdFRpWm--0R283hgQ"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "100639957901-49d6d3sfbfoh4uslv5r6o2c64np5dakj.apps.googleusercontent.com",
+              "client_id": "360134545222-9v6r7q2nenu438vsk39dvlmjse329o9m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

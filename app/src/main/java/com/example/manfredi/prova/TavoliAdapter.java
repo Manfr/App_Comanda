@@ -55,7 +55,7 @@ public class TavoliAdapter extends BaseAdapter {
 
         // Nel caso il layout non sia stato iniettato, provvedo
         if (view == null)
-            view = LayoutInflater.from(context).inflate(R.layout.menu_tavolo, null);
+            view = LayoutInflater.from(context).inflate(R.layout.elemento_tavolo, null);
 
         // Ottengo gli ID correnti
         TextView vNumTav = view.findViewById(R.id.textNum);

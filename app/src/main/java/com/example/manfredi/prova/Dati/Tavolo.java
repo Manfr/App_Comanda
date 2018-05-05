@@ -1,6 +1,8 @@
 package com.example.manfredi.prova.Dati;
 
-public class Tavolo {
+import java.io.Serializable;
+
+public class Tavolo implements Serializable {
 
     private String numTav;
     private int numPosti;
